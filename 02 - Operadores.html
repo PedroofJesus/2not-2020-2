@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 29/08</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma má prática de programação
+        'use strict'
+        
+        /*
+
+        Operadores relacionais
+        > Maior que
+        < Menor que
+        >= Maior ou igual que
+        <= Menor ou igual que
+        
+        */
+
+       //   Operador de igualdade
+       let a = 3, b = 6, c = '6'     //Operador de atribuição
+
+       // testanto a igualdade de duas variáveis para testar a igualdade, usamos dois sinais igual
+       //   alert(a == b)   FALSE
+       //   alert(b == c)   TRUE  POIS 6 = "6"
+
+       //   Operador de igualdade estrita ou "extamente igual"
+       //   alert(b === c)  FALSE   6 Number e "6" String
+       
+       //   Operador de diferença
+       //   alert(a != b)   TRUE
+       //   alert (b != c)  FALSE
+
+       //   Operador de diferença estrita ("exatamente diferente")
+       //   alert(b !== c)
+
+       /*
+            OPERADORES LÕGICOS
+            &&  E lógico (and)
+            ||  OU lógico (or)
+            !   Não lógico (not)
+       */
+        
+        //  alert (5 > 4 && 2 > 1)  TRUE
+        //  alert (5 < 4 && 2 > 1)  FALSE
+
+        //  alert (5 > 4 || 2 > 1 ) TRUE
+        //  alert (5 < 4 || 2 > 1 ) TRUE
+
+        /*
+            CONVERSÃO DE NÚMEROS PARA BOOLEANO
+            0 --> será convertido para false qualquer favor não-zero --> convertido para True
+        */
+
+       //   alert (!(5 < 4 || 2 > 1)) 
+       //   A expressão mais interna é um TRUE, colocando o ! por fora dos () a expressão fica FALSE
+       //   O Operador not (!) tem uma recedência muito alta (é interpretado primeiro) e, por isso, quase sempre
+       //   é usado como parênteses
+
+
+       //   4 < 5 || 3 == 3 && 2 > 1
+       // PRECEDÊNCIA DOS OPERADORES LÓGICOS
+       // 1°    !
+       // 2º    &&
+       // 3º    ||
+
+   
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
