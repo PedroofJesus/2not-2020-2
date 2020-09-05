@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            Solicite ao usuário para informar dois números e um operador
+            matemaático. Você usará três prompt(), um para cada número e
+            o terceiro para o operador.
+
+            Aceite os seguintes operadores:
+            + => adição
+            - => subtração
+            *, X ou x => multiplicação
+            / ou : => divisão
+
+            Efetue o cálculo apropriado de acordo com o operador informado
+            e informe o resultado usando document.write().
+        */
+       let resultado
+       let primeiro_n = parseFloat(prompt('Informe o primeiro nº:'))
+
+        if(isNaN(primeiro_n)){
+            alert('O nº informado não é válido')
+        }
+
+        let segundo_n = parseFloat(prompt('Informe o segundo nº:'))
+
+        if(isNaN(segundo_n)){
+            alert('O nº informado não é válido')
+        }
+
+        let operador = prompt('Informe a operação')
+
+        //if (operador !== + || operador !== - || operador !== / || operador !== : || operador !== * || operador !== x){
+            //alert('A operação informada não é válida')
+        //}
+
+        if (operador == '+'){
+            resultado = primeiro_n + segundo_n
+            document.write(resultado)
+        }
+
+        if (operador == '-'){
+            resultado = primeiro_n - segundo_n
+            document.write(resultado)
+        }
+
+        if (operador == '*' || 'x'){
+            resultado = primeiro_n * segundo_n
+            document.write(resultado)
+        }
+
+        if (operador == '/' || ':'){
+            resultado = primeiro_n * segundo_n
+            document.write(resultado)
+        }
+
+
+
+
+
+        
+
+
+
+        
+            
+ 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
