@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma má prática de programação
+        'use strict'
+
+        function calcular(){
+            let contador = 1 //conta de 1 a 10
+            let soma = 0 // soma os elementos informados
+            while (contador <= 10){ // vai executar 10x
+                let numero = Number(prompt("Informe um numero")) // informa um número
+                soma = soma + numero // soma o elemento
+                contador++  // incrementa o contador
+            }
+            document.getElementById("resultado").innerHTMIL = `Média = $(soma/10)`
+        }
+        
+    </script>
+</head>
+<body>
+        <h2> Exercícios exemplo </h2>
+        <h2> Clique no botão para iniciar <input type = 'number' id = 'num'> </h3>
+        <h3> <button type = "button" onClick = "calcular()"> calcular </button> </h3>
+        <h3 id="resultado"> </h3>
+</body>
+</html>

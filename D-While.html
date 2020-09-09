@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma má prática de programação
+        'use strict'
+
+        /*
+        while(condicao){
+
+            condicao1
+            condicao2
+            condicao3
+
+            condicaon
+
+
+        }
+        */
+
+       /*
+       let numero
+       numero =3
+       let contador = 1
+
+       while (contador <= 10){
+           let result =  contador*numero
+           console.log(`&{contador} = &{result}`)
+           contador++
+       }
+       */
+
+    function calcular(){
+    
+       let num = Number(document.getElementById("num").value)
+       let contador = 1
+       let saida = ""
+
+       while (contador <= 10){
+           let result =  contador * num
+           saida + saida + ` <br/> ${num} x ${contador} = ${result}`)
+           contador++ 
+       }
+       document.getElementById("resultado").innerHTML = saida
+       }
+           
+    </script>
+</head>
+<body>
+        <h2> Exercícios exemplo </h2>
+        <h3> Informe um número <input type = 'number' id = 'num'> </h3>
+        <h3> <button type = "button" onClick = "calcular()"> calcular </button> </h3>
+        <h3 id="resultado"> </h3>
+</body>
+</html>
