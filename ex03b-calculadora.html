@@ -43,30 +43,32 @@
             temErro = true
         } 
 
-            //if (operador !== + || operador !== - || operador !== / || operador !== : || operador !== * || operador !== x){
-            //alert('A operação informada não é válida')
-            //}
-
-        else if (operador == '+'){
-            resultado = primeiro_n + segundo_n
-            
-        }
-
-        else if (operador == '-'){
-            resultado = primeiro_n - segundo_n
-        }
-
-        else if (operador == '*' || operador == 'x' || operador == 'X'){
-            resultado = primeiro_n * segundo_n
-        }
-
-        else if (operador == '/' || operador ==':'){
-            resultado = primeiro_n / segundo_n            
-        }
-
         else {
-            alert('ERRO: o operador informado é invalido.')
-            temErro = true
+            switch(operador){
+                case '+':
+                    resultado = primeiro_n + segundo_n
+                    break
+
+                case '-':
+                    resultado = primeiro_n - segundo_n
+                    break 
+
+                case 'X':   // case vazio
+                case 'x':   // case vazio
+                case '*':
+                    resultado = primeiro_n * segundo_n
+                    break
+
+                case '/':   // case vazio
+                case ':':
+                    resultado = primeiro_n / segundo_n
+                    break
+
+                default:  // se náo entrar em nenhum case
+                    alert('O operador informado é inválido.')
+                    temErro = true
+
+            }
         }
 
         if(!temErro){
