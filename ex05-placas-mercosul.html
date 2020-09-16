@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de documento HTML</title>
+    <style>
+    h1 { font-family: arial;
+    }
+    h3 { text-shadow: 0.8px 0.8px 0.8px black;
+    }
+        </style>
+   
+</head>
+<body>
+<h1>Exercício 5</h1>
+<h2>Placas do Mercosul</h2> 
+<h3>
     <script>
         // 'use strict' impede que variáveis sejam declaradas
         // sem o uso de let, var ou const
@@ -38,9 +50,58 @@
             ao dígito informado.
         */
 
-    </script>
-</head>
-<body>
-    
+       let sdig = prompt('Informe o segundo dígito da sua placa tradicional (de 0 a 9): ')
+        //let temErro = false
+        let pMerc, temErro = false
+       
+
+       if(sdig >= 10 || sdig < 0){
+           alert('ERRO: O valor do mês inserido é invalido!')
+           temErro = true
+           
+       }
+
+            else {
+                switch(sdig){
+                case '0':
+                    pMerc = 'A'                    
+                    break 
+                case '1':
+                    pMerc = 'B'                    
+                    break                    
+                case '2':
+                    pMerc = 'C'                    
+                    break
+                case '3':
+                    pMerc = 'D'                    
+                    break     
+                case '4':
+                    pMerc = 'E'                    
+                    break 
+                case '5':
+                    pMerc = 'F'                    
+                    break
+                case '6':
+                    pMerc = 'G'                    
+                    break                         
+                case '7':
+                    pMerc = 'H'                    
+                    break 
+                case '8':
+                    pMerc = 'I'                    
+                    break 
+                case '9':
+                    pMerc = 'J'                    
+                    break 
+                }
+
+            }
+
+            if(!temErro){
+                document.write(`O segundo dígito da sua placa é ${sdig} e ele será substituido pela letra ${pMerc}`)
+            }
+
+    </script> 
+    </h2>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma má prática de programação
+        'use strict'
+
+        // Escrever os números de 1 a 10
+        // Três partes do for, separadas por ;
+        // 1) Inicialização
+        // 2) Condição
+        // 3) Incremento
+        
+        for(let i = 1; i <= 10; i = i++) { // ++ significa  +1
+            document.write( i + '<br>')
+        }
+
+        //traço HTML
+        document.write('<hr>')
+
+        // escrever os números de 1 a 10, saltando de 2 em 2
+        for(let i = 1; i <= 10; i = i += 2) { 
+            document.write( i + '<br>')
+        }
+
+        //traço HTML
+        document.write('<hr>')
+
+        // escrever os números de 1 a 10, de trás para frente
+        for(let i = 10; i >= 1; i = i--) { 
+            document.write( i + '<br>')
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

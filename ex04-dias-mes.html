@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de documento HTML</title>
-    <script>
+    <title>Dias do mês</title>
+    <style>
+    h1 { font-family: arial;
+    }
+    h3 { text-shadow: 0.8px 0.8px 0.8px black;
+    }
+        </style>
+    
+</head>
+<body>
+<h1>Exercício 4 </h1> 
+<h2>Dias do mês </h2>
+<h3>
+
+<script>
         // 'use strict' impede que variáveis sejam declaradas
         // sem o uso de let, var ou const
         // Inicializar variáveis diretamente é má prática de
@@ -23,9 +36,84 @@
             FEVEREIRO: 28 dias (29 em anos bissextos)
         */
 
+        let mes = prompt('Informe o mês (entre 1 a 12): ')
+        //let temErro = false
+        let dias, m, temErro = false
+       
+
+       if(mes >= 13 || mes <= 0){
+           alert('ERRO: O valor do mês inserido é invalido!')
+           temErro = true
+           
+       }
+
+            else {
+                switch(mes){
+                case '1':
+                    m = 'Janeiro'
+                    dias = '31'
+                    break                    
+                case '3':
+                    m = 'Março'
+                    dias = '31'
+                    break
+                case '5':
+                    m = 'Maio'
+                    dias = '31'
+                    break
+                case '7':
+                    m = 'Julho'
+                    dias = '31'
+                    break
+                case '8':
+                    m = 'Agosto'
+                    dias = '31'
+                    break
+                case '10':
+                    m = 'Outubro'
+                    dias = '31'
+                    break
+                case '12':
+                    m = 'Dezembro'
+                    dias = '31'
+                    break
+
+                
+                case '4':
+                    m = 'Abril'
+                    dias = '30'
+                    break
+                case '6':
+                    m = 'Junho'
+                    dias = '30'
+                    break
+                case '9':
+                    m = 'Setembro'
+                    dias = '30'
+                    break
+                case '11':
+                    m = 'Novembro'
+                    dias = '30'
+                    break
+                    
+
+                
+                case '2':
+                    m = 'Fevereiro'
+                    dias = '28 ou 29 (em anos bissextos)'
+                    break
+
+                                   
+                }
+
+            }
+
+            if(!temErro){
+                document.write(`O mês informado é o de ${m} e ele tem ${dias} dias`)
+            }
+        
+
     </script>
-</head>
-<body>
-    
+    </h3>
+
 </body>
-</html>

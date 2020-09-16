@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma má prática de programação
+        'use strict'
+
+        /*
+            loop da soma dos números até que seja zero
+        */
+
+       /*
+            Caracteristicas do loop do..while:
+           1) Local do teste: no final
+           2) Garantia de execução: 1 (uma)
+           3) Número de repetições é indeterminado
+       */
+
+       let soma = 0
+       let num
+
+       do{
+           num = Number(prompt('Digite um número para soma ou zero para terminar:'))
+
+           if( !isNaN(num)){
+                soma += num
+           }
+
+       }while(num != 0)
+
+
+       document.write(`A soma dos números informados é ${soma}`)
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
