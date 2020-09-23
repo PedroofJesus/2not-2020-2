@@ -9,7 +9,7 @@
     }
     h3 { text-shadow: 0.8px 0.8px 0.8px black;
     }
-        </style>
+    </style>
     
 </head>
 <body>
@@ -36,12 +36,16 @@
             FEVEREIRO: 28 dias (29 em anos bissextos)
         */
 
-        let mes = prompt('Informe o mês (entre 1 a 12): ')
+        //let mes = prompt('Informe o mês (entre 1 a 12): ')
         //let temErro = false
+        let mes
         let dias, m, temErro = false
        
+       do {
+           mes = parseInt(prompt('Informe o número de um mês (de 1 a 12): '))
+       } while (isNaN(mes >= 13 || mes <= 0))
 
-       if(mes >= 13 || mes <= 0){
+       if(isNaN(mes)){
            alert('ERRO: O valor do mês inserido é invalido!')
            temErro = true
            
@@ -96,13 +100,11 @@
                     dias = '30'
                     break
                     
-
                 
                 case '2':
                     m = 'Fevereiro'
                     dias = '28 ou 29 (em anos bissextos)'
                     break
-
                                    
                 }
 

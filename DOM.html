@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    
+</head>
+<body>
+    <h1>Título da página</h1>
+    <p>Isto é um parágrafo</p>
+    <ul>
+        <li id="item-x">Terceiro </li>
+        <li>Primero item</li>
+        <li id="Intruso">Intruso</li>
+        <li>Segundo item</li>
+        
+    </ul>
+    <script>
+
+        /*
+            QUANDO O JAVASCRIPT É UTILIZADO PARA MANIPULAR O HMTL, A SEÇÃO <SCRIPT> DEVE SER POSICIONADA NA PARTE FINAL DO ARQUIVO
+            LOGO ANTES DO </BODY>
+        */
+       
+        // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma má prática de programação
+        'use strict'
+
+        /*
+            DOM =  DOCUMENT OBJECT MODEL (Modelo de objetos do documento)
+        */
+        
+        // document.querySelector: retorna o primeiro elemento de seu tipo
+        const cabec = document.querySelector('h1')
+        // alterando o texto interno do elemento
+        cabec.innerHTML = 'Manipulando o Document Object Model (DOM)'
+
+        /*
+            Alterando o texto do SEGUNDO item
+        */
+
+       // document.querySelectorAll: captura TODOS os elementos do tipo informado
+       const itens = document.querySelectorAll('li')
+
+       // Em JavaScript, o primeiro elemento é o de indice 0 (zero)
+       itens[1].innerHTML = 'SEGUNDO ITEM ALTERADO'
+
+       // Forma tradicional (anterior 2014)
+       const itens2 = document.getElementsByTagName("li")
+       itens2[2].innerHTML = 'TERCEIRO ITEM ALTERADO'
+
+       // Captirando um elemento por id da forma antiga
+       const elemIntruso = document.getElementById('Intruso')
+       elemIntruso.innerHTML = 'SOU UM INTRUSO'
+
+       // capturando um elemento por id da forma nova (ES5+)
+       // Para capturar por id com o querySelector(), é necessáio usar #
+       // antes de id do elemento
+       const elemX = document.querySelector('#item-x')
+       elemX.style.backgroundColor = 'yellow'
+
+    </script>
+</body>
+</html>
