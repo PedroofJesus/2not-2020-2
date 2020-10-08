@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    
+</head>
+<body>
+    <h1>Formulário de cálculo de preços</h1>
+
+
+    <!-- label e input são elementos inline (ou em linha)-->
+    <!-- div é um elemento de bloco -->
+    <div>
+        <label>Nomedo produto</label>
+        <input size="50">
+    </div>
+
+     <div>
+        <label>Quantidade</label>
+        <input id="Qtd" type="number" step="0.01" min="1" máx="100">
+        <!-- o input pode ter min ou máx-->
+        <!-- step="0.01" é feito para fazer a setinha subir ou descer de tanto pra tanto, o normal é 1-->
+        <!-- id vc nomei o elemento e facilita identificação dele no JS-->
+    </div>
+
+     <div>
+        <label>Preço unitário</label>
+        <input id="preco_unit" type="number" min="0.01">
+    </div>
+
+    <div>
+        <label>PREÇO TOTAL: </label>
+        <!-- span é inline (lugarzinho onde sai o resultado) e o div em bloco-->
+        <!-- para fazer os calculos, tem que buscar dentro os dados e mandar para o calculo no span-->
+        <span id="resultado"></span>
+    </div>
+    
+    <!--
+        <script>
+            // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+            // Inicializar variáveis diretamente é uma má prática de programação
+            'use strict'
+
+            function calcular() {  // função serve para isolar o código para ser executado em determinada condição
+
+                let elemQtd = document.querySelector('#Qtd')   // forma moderna
+                let elemPrecoUnit = document.getElementById('preco_unit')   // forma trad.
+                let elemResultado = document.querySelector('#resultado')
+
+                let quantidade = parseFloat (elemQta.value)
+                let precoUnit = parseFloat (elemPrecoUnit.value)
+                let resutaldo
+                
+                
+                // Caso AMBOS os números tenham passado na validação
+                if(!isNaN(quantidade) && !isNaN(precoUnit)){
+                    elemResultado.innerText = quantidade * preco_unit
+
+                }
+
+                else {
+                    elemResultado.innerText = ' ' 
+                }
+            }
+
+            elemQtd.addEventListener('change', calcular)
+            elemPrecoUnit.addEventListener('Change', calcular)
+
+        </script>
+
+    -->   
+
+
+   <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        let elemQtd = document.querySelector('#qtd')    // Forma moderna
+        let elemPrecoUnit = document.getElementById('preco_unit')   // Forma trad.
+        let elemResultado = document.querySelector('#resultado')
+
+
+        function calcular() {
+            let quantidade = parseFloat(elemQtd.value)      // Forma trad.
+            let precoUnit = Number(elemPrecoUnit.value)     // Forma moderna
+            let resultado
+
+
+            // Caso AMBOS os números tenham passado na validação
+            if(!isNaN(quantidade) && !isNaN(precoUnit)) {
+                elemResultado.innerText = (quantidade * precoUnit).toFixed(2) // 2 casas decimais
+            }
+            else {
+                elemResultado.innerText = ''
+            }
+        }
+
+        // change: o valor do input mudou (só detectável após sair do elemento)
+        elemQtd.addEventListener('change', calcular)
+        elemPrecoUnit.addEventListener('change', calcular)
+        
+    
+        // keyup: uma tecla foi precionada e liberada
+        elemQtd.addEventListener('keyup', calcular)
+        elemPrecoUnit.addEventListener('heyup', calcular)
+        
+    </script>  
+
+
+</body>
+</html>

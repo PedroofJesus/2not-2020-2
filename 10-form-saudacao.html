@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    
+    <style>
+        label{
+           /* Forçar o modo de exibição em bloco*/
+            display: block;
+        }
+            /*Excessão a regra*/
+        fieldset label{
+            display: inline;
+        }
+
+        fieldset{
+            border: 1px solid lightgray;
+            border-radius: 8px;
+            width: 50%;
+        }
+
+        div, fieldset{
+            margin-bottom: 15px;
+        }
+
+        /*div{
+                border: 1px dotted red;
+        }*/
+
+    </style>
+
+</head>
+<body>
+    <h1> Formulário de saudação</h1>
+    <div>
+        <label>Primeiro nome</label>
+        <input type="text"  id="primeiro-nome" placeholder="Informe seu primeiro nome"  size="25">
+        <!--Onde placeholder é o comentário interno do retangulo de informação
+        size é o tamanho do retangulo-->
+    </div>
+
+    <div>       
+        <label>Sobrenome</label>
+        <input type="text"  id="primeiro-nome" placeholder="Informe seu sobrenome">
+    </div>
+
+    <div>
+        <label>Forma de tratamento</label>
+        <select id="forma-tratamento">
+            <option>(Selecione)</option>
+            <option>Vossa Majestade</option>
+            <option>Excelentíssimo/a</option>
+            <option>Ilustríssimo/a</option>
+            <option>Vossa Senhoria</option>
+            <option>Senhor/a</option>
+            <option>Cremosíssimo/a</option>
+        </select>
+    </div>
+
+    <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio"  id="masculino" name="sexo">
+        <label for="masculino">Masculino</label>
+        <br>
+        <br>
+        <input type="radio"  id="feminino"  name="sexo" checked>
+        <label for="feminino">Feminino</label>
+        <!--name guarda a infomação de um grupo, ou seja, no caso, ou marca um ou outro, ou marca
+        feminino ou masculino-->
+    </fieldset>
+
+    <div>
+        <label>Hora do dia</label>
+        <input type="number"  id="hora-dia" min="0" max="23">
+    </div>
+
+    <fieldset>
+        <legend>Exibição da saudação</legend>
+        <input type="checkbox" id="alert" checked>
+        <label for="alert">Exibir com alert()</label>
+        <br>
+        <br>
+        <input type="checkbox"  id="document">
+        <label for="document">Exibir no documento</label>
+    </fieldset>
+
+    <div id="saudação"></div>
+
+    <div>
+        <button id="enviar">Enviar</button>
+    </div>
+
+</body>
+</html>
