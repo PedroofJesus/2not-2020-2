@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma má prática de programação
+        'use strict'
+
+        
+        let i     
+      
+        for(let i <= 400; i = 1; i -= 29){          // para inserir no documento apenas os quilômetros que haverá lombofaixa, saindo do Km 400 sentido ao 1         -
+                document.write(i)
+        }
+
+        let km, algo            // para receber os dados inseridos pelo usuário
+        do {
+            km = parseInt(prompt('Informe um quilometro entre 1 e 400: '))  
+        } while(isNaN(km) || km >= 1 || km <= 400)                  // caso o usuário insira algum valor que não foi pedido
+
+        switch(km) {
+            case '92':  // case vazio
+            case '177': // case vazio
+            case '291': // case vazio
+            case '388': 
+                algo = "Megaloja Magazine Luiza" 
+                break
+            case '153':
+            case '356':    
+                algo = 'DRIVE-Thru Calçados Rafarillo'
+                break
+            case '187':
+                algo = 'Posto de recarga viação São José'
+                break
+            case '210':
+                algo = 'Filial Padaria estrela'
+                break
+            case '314':
+                algo = 'Fabrica Jubilei do amendoin'
+                break
+            case '314':
+                algo = 'Franca AcquaParque Unidade II'
+                break
+
+             default:  // Caso não se encaixe em nenhum caso
+                    alert('Vapo, tem nada aqui não! Segue reto toda vida, meu fii.')
+            
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
